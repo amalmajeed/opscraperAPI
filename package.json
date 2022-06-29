@@ -4,20 +4,27 @@
   "description": "API service for the one piece scraper data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amalmajeed/opscraperAPI.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Amal Majeed",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amalmajeed/opscraperAPI/issues"
   },
   "homepage": "https://github.com/amalmajeed/opscraperAPI#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/preset-env": "^7.18.6"
   }
 }
