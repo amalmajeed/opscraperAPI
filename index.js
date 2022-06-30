@@ -61,6 +61,8 @@ app.route("/episodetitle/:ep").get(async (request, response, next) => {
   }
 });
 
+// APP / SERVER
+
 var server = app.listen(PORT, async () => {
   console.log(
     `=============================The One Piece Scraper API service is running live on port: ${PORT} ============================= \n`
