@@ -106,3 +106,5 @@ dist
 # unnecessary secret files
 passwords.txt
 resources.txt
+key.pem
+csr.pem
