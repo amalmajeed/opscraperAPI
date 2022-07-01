@@ -117,6 +117,7 @@ app.route("/api").post(jsonParser, (request, response) => {
     if (!episodeNumber) {
       throw new Error("Missing parameter 'episodeNumber'");
     }
+    // permanent redirect code is 301
     response.redirect(301, `/${serviceName}/${episodeNumber}`);
   } catch (err) {
     response.status = 400;
@@ -145,24 +146,4 @@ sslServer.listen(PORT, async () => {
   console.log(
     `=============================The One Piece Scraper API service is running live on port: ${PORT} ============================= \n`
   );
-  //   //   DB CONNECTION LOGIC HERE !
-  //   try {
-  //     await dbClient.connect();
-  //     console.log(`Connected to cluster 'episodestochapters' successfully !`);
-  //     const opdb = await dbClient.db("animetomanga");
-  //     console.log(`Connected to DB 'animetomanga' successfully !`);
-  //     const e2title = await opdb.collection("episodetotitle");
-  //     const cursr = await e2title.find({ _id: "onepiecetitles" });
-  //     const map = await cursr.toArray();
-  //     console.log(`Succesfully retrieved the episode to title maps`);
-  //     console.log(`Connected to collection 'episodetotitle' successfully !`);
-  //     dbClient.close().then(() => {
-  //       console.log("Connection closed successfully !");
-  //     });
-  //   } catch (err) {
-  //     console.error(err);
-  //     server.close(() => {
-  //       console.log(`Connection to the server at port ${PORT} has been closed !`);
-  //     });
-  //   }
 });
