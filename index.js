@@ -47,7 +47,7 @@ app.route("/episodetitle/:ep").get(async (request, response, next) => {
     });
   } catch (err) {
     console.error(err);
-    server.close(() => {
+    sslServer.close(() => {
       console.log(`Connection to the server at port ${PORT} has been closed !`);
     });
   }
